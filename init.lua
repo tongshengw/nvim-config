@@ -79,6 +79,8 @@ vim.opt.confirm = true
 -- NOTE: my own keymaps!!!
 vim.keymap.set('n', '<leader>pv', '<cmd>Oil<CR>', { desc = 'Open [P]roject [V]iew' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = '[E]rror floating window' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 --  See `:help vim.keymap.set()`
 
