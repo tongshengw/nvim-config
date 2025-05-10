@@ -583,9 +583,7 @@ require('lazy').setup({
       local servers = {
         clangd = {
           cmd = {
-            --'/Users/tswu/builds/llvm/bin/clangd',
             'clangd',
-            '--log=verbose',
             '--function-arg-placeholders=false',
           },
         },
@@ -752,7 +750,7 @@ require('lazy').setup({
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        preset = 'default',
+        preset = 'super-tab',
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
