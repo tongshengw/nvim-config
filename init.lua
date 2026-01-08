@@ -601,6 +601,8 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
+        html = {},
+
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -673,7 +675,7 @@ require('lazy').setup({
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
-        local disable_filetypes = { c = true, cpp = true }
+        local disable_filetypes = { c = true, cpp = true, cuda = true }
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
         else
@@ -854,6 +856,13 @@ require('lazy').setup({
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
+  },
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      toggler = { line = '<D-/>' },
+      -- add any options here
+    },
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
